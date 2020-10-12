@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created using create-snowpack-app" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    
+    <div class="welcomeMessage" id="welcomeMessage">
+      Welcome to the quiz app <br>
+      Here you will get 7 questions <br>
+      and you have 10 seconds to answer each question<br> 
+      Let's start by entering your name <br>
+      <input type="text" id="userInputName">
+      <button type="button" id="nameButton">Start the quiz</button>
+    </div>
+
+    <div class="lostN" id="lostN">
+    </div>
+    <div class="winN" id="winN">
+    </div>
+    
+    <div class="mainInterface" id="mainInterface">
+      <div class="welcomeMessageName" id="welcomeMessageName"></div>
+      
+      <div>
+        <button type="button" class="startButton" id="startButton">Start Quiz</button>
+      </div>
+      <div class="timer">
+        <p value="0" max="10" id="progressTime" class="progressTime"></p>
+      </div>
+      <div id="quistions"></div>
+
+      <div id="alternatives" class="alternatives"></div>
+      <div >
+        <h6 class="answerInterface">Answer here please!</h6>
+        <div class="userInputContainer">
+          <input type="text" id="answerInput" class="answerInput">
+        </div>
+        <form name="radioOptions" class="radioOptions">
+          <input type="radio" id="alt1" name="answer" value="alt1">
+          <label for="alt1" id="alt1t"></label><br>
+          <input type="radio" id="alt2" name="answer" value="alt2">
+          <label for="alt2" id="alt2t"></label><br>
+          <input type="radio" id="alt3" name="answer" value="alt3">
+          <label for="alt3" id="alt3t"></label><br>
+          <input type="radio" id="alt4" name="answer" value="alt4">
+          <label for="alt4" id="alt4t"></label>
+        </form>
+      </div>
+      <div class="answer" id="answer">
+        <button type="button" class="sumiteAnswerButton" id="sumiteAnswerButton">Submit Answer</button>
+        <button type="button" class="nextButton" id="nextButton">Next Question</button>
+      </div>
+    </div>
+    
+    <script type="module" src="/_dist_/index.js"></script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

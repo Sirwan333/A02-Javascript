@@ -1,0 +1,89 @@
+#img {
+  display: block;
+  margin: auto;
+  height: 128px;
+  width: 128px;
+  padding: 2rem;
+}
+
+#canvas {
+  display: block;
+  margin: 2rem auto;
+  width: 540px;
+  height: 540px;
+}
+
+.welcomeMessage{
+  background-color: cornflowerblue;
+  height: 100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 40px;
+}
+
+.mainInterface{
+  background: #87CEFA;
+  height:100vh;
+  width:100vw;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 40px;
+  align-items: center;
+  align-items: center;
+}
+
+.answerInterface{
+margin: 0;
+margin-top: 10px;
+}
+
+.radioOptions{
+  font-size: 30px;
+  display: none;
+}
+
+.lostN{
+  background-color: cornflowerblue;
+  height: 100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+  padding-top: 300px;
+  font-size: 40px;
+  display: none;
+}
+
+.winN{
+  background-color: cornflowerblue;
+  height: 100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+  padding-top: 300px;
+  font-size: 40px;
+  display: none;
+}
+.timer{
+  background-color: white;
+  color: black;
+  margin: 0;
+  border: black solid 3px;
+  width: 50px;
+  height: 50px;
+  margin-left: 735px;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+

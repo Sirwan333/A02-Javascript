@@ -8,20 +8,30 @@
 </head>
 <body>
 
-    <p>Welcom to the game Hangman</p>
-    <p id="userInterface"></p>
-    <p id="notification"></p>
-    <p id="wrongLetters"></p>
-    <p id="lostNotification">
-        You Lost! 
-        <button type="button" onclick="playAgain()">Play Again</button>
-    </p>
-    <p id="wonNotification"> 
-        You Won!
-        <button type="button" onclick="playAgain()">Play Again</button>
-    </p>
-    <input type="text" id="userInput">
-    <button type="button" onclick="myfunction()">Press Me</button>
+    <p class="titleMessage">Welcom to the Hangman game</p>
+    <div class="inputLetter">
+        <input type="text" id="userInput">
+        <button type="button" onclick="myfunction()">Check Letter</button>
+    </div>
+    <div class="userUi">
+        <p id="userInterface" class="userInterface"></p>
+        <p id="notification" class="notification"></p>
+        <h1 class="wronglettertitle">Wrong Letters:</h1>
+        <p id="wrongLetters" class="wrongLetters"></p>
+        <div class="lostandwinnotifications">
+            <p id="lostNotification" class="lostNotification">
+                You Lost! 
+                <button type="button" onclick="playAgain()">Play Again</button>
+            </p>
+            <p id="wonNotification" class="wonNotification"> 
+                You Won!
+                <button type="button" onclick="playAgain()">Play Again</button>
+            </p>
+        </div>
+    </div>
+
+    
+    
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="400"

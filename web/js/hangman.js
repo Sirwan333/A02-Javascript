@@ -36,8 +36,6 @@ function myfunction(){
         }  
     }else{
         window.alert("You Already enterd this letter")
-       /* notification.style.display = 'block';
-        document.getElementById("notification").innerHTML = "You Already enterd this letter";*/
     }
     
     
@@ -60,7 +58,7 @@ function checkLetter(){
     ${randomWord.split("").map(
 				value => `
           <span>
-            ${userLetterArray.includes(value) ? value : '__'}
+            ${userLetterArray.includes(value) ? value : '_'}
           </span>
         `
             ).join("")}`;     

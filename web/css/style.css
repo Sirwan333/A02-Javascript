@@ -1,3 +1,40 @@
 body {
-  background-color: aqua;
+  background-color: #008080;
 }
+
+.titleMessage{
+  width: 100%;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.inputLetter{
+    align-items: center;
+    padding-left: 630px;
+}
+
+.userUi{
+    float: right;
+    margin-right: 500px;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.lostandwinnotifications{
+    background: #76D7C4;
+    color: white;
+    margin-top: 50px;
+    padding-left: 10px;
+
+}
+
+.wronglettertitle{
+    font-size: 30px;
+}
+
+svg{
+    float: left;
+}
+
