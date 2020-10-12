@@ -21,26 +21,64 @@ hang_head.style.display = 'none';
 lostNotification.style.display = "none";
 wonNotification.style.display = "none";
 
+let updatWrongLetter = function () {
+    function updatWrongLetterF () { 
+        document.getElementById("wrongLetters").innerHTML = `
+        ${wrongLetterArray.map(
+                    value => `
+              <span>
+                ${value}
+              </span>
+            `
+                )}`;  
+    }
+    return {
+      "b": updatWrongLetterF,
+    }
+  }
+
+let checkLetter = function () {
+    function checkLetterF () { 
+        document.getElementById("userInterface").innerHTML = `
+            ${randomWord.split("").map(
+                    value => `
+            <span>
+                ${userLetterArray.includes(value) ? value : '_'}
+            </span>
+            `
+                ).join("")}`;     
+        let usertext = document.getElementById("userInterface").innerText.replace(/[ \n]/g, '');; 
+        if(usertext===randomWord){
+             wonNotification.style.display = "block";
+        }  
+    }
+    return {
+      "c": checkLetterF,
+    }
+}
+
+let check = checkLetter();
+check.c()
+let update = updatWrongLetter();
+
 function myfunction(){
     notification.style.display = 'none';
     let userLetter = document.getElementById("userInput").value;
     if(!userLetterArray.includes(userLetter)){
         userLetterArray.push(userLetter); 
-        checkLetter();
+        check.c()
         if(!randomWord.includes(userLetter)){
             wrongLetterArray.push(userLetter); 
             window.Hangman.show(window.Hangman.validParts[wrongLetterArray.indexOf(userLetter)])
-            updatWrongLetter()
+            update.b()
             checkResult();
 
         }  
     }else{
         window.alert("You Already enterd this letter")
-    }
-    
-    
-     
+    }  
 }
+
 function checkResult(){
     if(wrongLetterArray.length == Hangman.validParts.length){
         lostNotification.style.display = 'block';
@@ -50,37 +88,6 @@ function checkResult(){
 function playAgain(){
     window.location.reload();
 }
-
-
-function checkLetter(){
-    
-    document.getElementById("userInterface").innerHTML = `
-    ${randomWord.split("").map(
-				value => `
-          <span>
-            ${userLetterArray.includes(value) ? value : '_'}
-          </span>
-        `
-            ).join("")}`;     
-    let usertext = document.getElementById("userInterface").innerText.replace(/[ \n]/g, '');; 
-    if(usertext===randomWord){
-        wonNotification.style.display = "block";
-    }
-}
-
-function updatWrongLetter(){
-    document.getElementById("wrongLetters").innerHTML = `
-    ${wrongLetterArray.map(
-				value => `
-          <span>
-            ${value}
-          </span>
-        `
-            )}`;        
-}
-
-checkLetter();
-
 
 /**
  * Showing off how to display/hide parts of a SVG-image.
